@@ -88,14 +88,14 @@
 		  </div>
 		</div>
 		<!-- Modal Lista de Produtos-->
-		<iframe id="frmPizzas" src="produtos/pizzas.txt" onload="loadFile('frmPizzas');" style="display: none;"></iframe>
+		<!--iframe id="frmPizzas" src="produtos/pizzas.txt" onload="loadFile('frmPizzas');" style="display: none;"></iframe>
 		<iframe id="frmVolutellas" src="produtos/volutellas.txt" onload="loadFile('frmVolutellas');" style="display: none;"></iframe>
-		<iframe id="frmPaes" src="produtos/paes.txt" onload="loadFile('frmPaes');" style="display: none;"></iframe>
+		<iframe id="frmPaes" src="produtos/paes.txt" onload="loadFile('frmPaes');" style="display: none;"></iframe-->
 		<div class="modal fade" id="produtosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-			    <h5 class="modal-title">Escolha aqui seus Produtos</h5>
+			    <h5 class="modal-title">Nossos Produtos</h5>
 				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -104,39 +104,101 @@
 				<div class="accordion" id="accordionExample">
 				  <div class="accordion-item">
 					<h2 class="accordion-header" id="headingOne">
-					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						Pizzas
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+						Pizzas Especiais
 					  </button>
 					</h2>
-					<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 					  <div class="accordion-body">
-						<ul class="list-group" id="listaPizzas">
+						<ul class="list-group" id="listaPizzas" style="list-style-type:none; padding: 0; margin: 0">
+						  <li>Frango com Catupiry®</li>
+						  <li>Quattro Formaggi</li>
+						  <li>Bacon, Brie e Melaço de Cana</li>
+						  <li>Calabresa com Bacon</li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+						Pizzas Clássicas
+					  </button>
+					</h2>
+					<div id="collapseOne2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						<ul class="list-group" id="listaPizzas" style="list-style-type:none; padding: 0; margin: 0">
+						  <li>Mozzarella</li>
+						  <li>Margherita</li>
+						  <li>Calabresa</li>
+						  <li>Frango</li>
+						</ul>
+					  </div>
+					</div>
+				  </div>				  
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+						Pizzas Veganas
+					  </button>
+					</h2>
+					<div id="collapseOne3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						<ul class="list-group" id="listaPizzas" style="list-style-type:none; padding: 0; margin: 0">
+						  <li>Abobrinha com Queijo de Castanha Probiótico MultVeg</li>
+						  <li>Queijo de Castanha Curado MultVeg</li>
+						  <li>Margherita com Requeijão Defunado MultVeg</li>
+						  <li>Requeijão Defumado MultVeg com Amêndoas</li>
 						</ul>
 					  </div>
 					</div>
 				  </div>
 				  <div class="accordion-item">
 					<h2 class="accordion-header" id="headingTwo">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						Volutellas
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+						Volutellas Clássicas
 					  </button>
 					</h2>
-					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					<div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 					  <div class="accordion-body">
-						<ul class="list-group" id="listaVolutellas">
+						<ul class="list-group" id="listaVolutellas" style="list-style-type:none; padding: 0; margin: 0">
+						  <li>Parmesão</li>
+						  <li>Alho</li>
+						  <li>Calabresa</li>
+						  <li>Churros</li>
+						  <li>Chocolate</li>
 						</ul>
 					  </div>
 					</div>
 				  </div>
 				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo">
+						Volutellas Veganas
+					  </button>
+					</h2>
+					<div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						<ul class="list-group" id="listaVolutellas" style="list-style-type:none; padding: 0; margin: 0">
+						  <li>Canela</li>
+						  <li>Maionese de Alho Heavenn's MultVeg</li>
+						  <li>Churros de Doce de Leite MultVeg</li>
+						  <li>Requeijão de Castanha Defumado MultVeg</li>						
+						</ul>
+					  </div>
+					</div>
+				  </div>				  
+				  <div class="accordion-item">
 					<h2 class="accordion-header" id="headingThree">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree">
 						Pães
 					  </button>
 					</h2>
-					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					<div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 					  <div class="accordion-body">
-						<ul class="list-group" id="listaPaes">
+						<ul class="list-group" id="listaPaes" style="list-style-type:none; padding: 0; margin: 0">
+						  <li>Pão Italiano</li>
+						  <li>Pão Caseirinho</li>						
 						</ul>
 					  </div>
 					</div>
@@ -162,8 +224,9 @@
                         <p class="text-white-75 mb-5">Do Freezer direto para a Airfryer!</p>
 						<p id="pix" hidden>00020101021126330014br.gov.bcb.pix0111086117736325204000053039865802BR5914LUDIMILA BRAGA6009SAO PAULO622905251GZ6JGGDQR75H0VDDG7J859FN63044CA0</p>
 						<ul class="row gy-2" style="list-style-type:none; padding: 0; margin: 0">
+							<li><button href="#" class="btn btn-primary btn-xl" onclick="$('#produtosModal').modal('show')">Nossos Produtos</button></li>
+							<li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</button></li>
 							<li><a href="https://instagram.com/airfood_ofc" class="btn btn-primary btn-xl">Nosso Instagram</a></li>
-							<li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</a></li>
 							<li><a href="https://wa.me/5532984951046?text=Ol%C3%A1%2C%20equipe%20Airfood%21%20Eu%20gostaria%20de%20fazer%20um%20encomenda%21" class="btn btn-primary btn-xl">Nosso WhatsApp</a></li>
 						</ul>	
                     </div>
