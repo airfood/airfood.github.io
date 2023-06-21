@@ -91,11 +91,11 @@
 		<!--iframe id="frmPizzas" src="produtos/pizzas.txt" onload="loadFile('frmPizzas');" style="display: none;"></iframe>
 		<iframe id="frmVolutellas" src="produtos/volutellas.txt" onload="loadFile('frmVolutellas');" style="display: none;"></iframe>
 		<iframe id="frmPaes" src="produtos/paes.txt" onload="loadFile('frmPaes');" style="display: none;"></iframe-->
-		<div class="modal fade" id="produtosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal modal-lg fade" id="encomendaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-			    <h5 class="modal-title">Nossos Produtos</h5>
+			    <h5 class="modal-title">Faça sua Encomenda!</h5>
 				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -110,15 +110,38 @@
 					</h2>
 					<div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 					  <div class="accordion-body">
-						<ul class="list-group" id="listaPizzas">
-						  <li>Lombinho Canadense Defumado Artesanal com Melaço Trufado</li>
-						  <li>Costela Bovina com Redução de Cerveja e Azeite de Trufas Negras</li>
-						  <li>Copa Lombo Defumado, Azeite de Laranja e Nuvem de Parmesão</li>
-						  <li>Quattro Formaggi (Mozzarella, Gorgonzola, Parmesão e Catupiry®)</li>
-						  <li>Bacon, Brie e Melaço de Cana</li>
-						  <li>Bacon, Geléia de Damasco e Catupiry®</li>
-						  <li>Margherita Speciale com Tomate Cereja Confitado e Pesto de Manjericão</li>
-						</ul>
+					    <table class="table">
+						  <tbody>
+						  <tr>
+						    <th scope="col">Lombinho Canadense Defumado Artesanal com Melaço Trufado</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaLombCan"></th>
+						  </tr>	
+						  <tr>
+						    <th scope="col">Costela Bovina com Redução de Cerveja e Azeite de Trufas Negras</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaCostela"></th>
+						  </tr>	
+						  <tr>
+						    <th scope="col">Copa Lombo Defumado, Azeite de Laranja e Nuvem de Parmesão</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaLombDef"></th>
+						  </tr>	
+						  <tr>
+						    <th scope="col">Quattro Formaggi (Mozzarella, Gorgonzola, Parmesão e Catupiry®)</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaQuatForm"></th>
+						  </tr>	
+						  <tr>
+						    <th scope="col">Bacon, Brie e Melaço de Cana</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaBaconBrieMel"></th>
+						  </tr>	
+						  <tr>
+						    <th scope="col">Bacon, Geléia de Damasco e Catupiry®</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaBaconDamCat"></th>
+						  </tr>	
+						  <tr>
+						    <th scope="col">Margherita Speciale com Tomate Cereja Confitado e Pesto de Manjericão</th>
+							<th scope="col"><input type="number" min="0" step="1" class="form-control" id="PizzaMarg"></th>
+						  </tr>
+						  </tbody>
+						</table>
 					  </div>
 					</div>
 				  </div>
@@ -206,10 +229,10 @@
                         <p class="text-white-75 mb-5">Do Freezer direto para a Airfryer!</p>
 						<p id="pix" hidden>00020101021126330014br.gov.bcb.pix0111086117736325204000053039865802BR5914LUDIMILA BRAGA6009SAO PAULO622905251GZ6JGGDQR75H0VDDG7J859FN63044CA0</p>
 						<ul class="row gy-2" style="list-style-type:none; padding: 0; margin: 0">
-							<li><button href="#" class="btn btn-primary btn-xl" onclick="$('#produtosModal').modal('show')">Nossos Produtos</button></li>
+							<li><button href="#" class="btn btn-primary btn-xl" onclick="$('#encomendaModal').modal('show')">Faça sua Encomenda</button></li>
 							<!--li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</button></li-->
 							<li><a href="https://instagram.com/airfood_ofc" class="btn btn-primary btn-xl">Nosso Instagram</a></li>
-							<li><a href="https://wa.me/5532991405412?text=Ol%C3%A1%2C%20equipe%20Airfood%21%20Eu%20gostaria%20de%20fazer%20um%20encomenda%21" class="btn btn-primary btn-xl">Nosso WhatsApp</a></li>
+							<li><a href="https://wa.me/5532991757115?text=Ol%C3%A1%2C%20equipe%20Airfood%21%20Eu%20gostaria%20de%20fazer%20um%20encomenda%21" class="btn btn-primary btn-xl">Nosso WhatsApp</a></li>
 						</ul>	
                     </div>
                 </div>
