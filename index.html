@@ -25,12 +25,10 @@
 				var qrcode = _pix.Pix("08611773632", "LUDIMILA BRAGA", "MINAS GERAIS", valor, "Pizzas", true);
 				var qrcode2 = null;
 				qrcode.then((res) => document.getElementById('qrcode').src = res);
-				//console.log(qrcode2);
-				//document.getElementById('qrcode').src = qrcode2	;
 
 			}
 			function limpaQrcode() {
-				document.getElementById('qrcode').src = null;
+				document.getElementById('qrcode').src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 			}
 			function copyToClipboard(element) {
 				var $temp = $("<input>");
@@ -110,7 +108,7 @@
 			<div class="modal-content">
 			  <div class="modal-header">
 			    <h5 class="modal-title">Pague com Pix!</h5>
-				<button type="button" class="close" onclick="limpaQrcode" data-bs-dismiss="modal" aria-label="Close">
+				<button type="button" class="close" onclick="limpaQrcode()" data-bs-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
@@ -122,7 +120,7 @@
 				</ul>		
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" onclick="limpaQrcode" data-bs-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-secondary" onclick="limpaQrcode()" data-bs-dismiss="modal">Fechar</button>
 			  </div>
 			</div>
 		  </div>
