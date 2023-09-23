@@ -29,6 +29,9 @@
 				//document.getElementById('qrcode').src = qrcode2	;
 
 			}
+			function limpaQrcode() {
+				document.getElementById('qrcode').src = null;
+			}
 			function copyToClipboard(element) {
 				var $temp = $("<input>");
 				$("body").append($temp);
@@ -107,7 +110,7 @@
 			<div class="modal-content">
 			  <div class="modal-header">
 			    <h5 class="modal-title">Pague com Pix!</h5>
-				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+				<button type="button" class="close" onclick="limpaQrcode" data-bs-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
@@ -115,11 +118,11 @@
 				<ul class="row gy-2" style="list-style-type:none; padding: 0; margin: 0">
 					<li><input id="valor" type="number" min="0.00" step="0.05" value="1.00" class="form-control" placeholder="valor"></li>							<!--li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</button></li-->
 					<li><button href="#" class="btn btn-primary btn-xl" onclick="calcular()">Calcular</button></li>
-					<li><img id="qrcode"></li>
+					<li><img id="qrcode" style="max-width: 100%"></li>
 				</ul>		
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-secondary" onclick="limpaQrcode" data-bs-dismiss="modal">Fechar</button>
 			  </div>
 			</div>
 		  </div>
