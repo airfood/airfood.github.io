@@ -18,6 +18,17 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
 		<script>
+			function calcular(){
+				//img id qrcode
+				var valor = document.getElementById('valor').value
+				console.log(valor);
+				var qrcode = _pix.Pix("08611773632", "LUDIMILA BRAGA", "MINAS GERAIS", valor, "Pizzas", true);
+				var qrcode2 = null;
+				qrcode.then((res) => document.getElementById('qrcode').src = res);
+				//console.log(qrcode2);
+				//document.getElementById('qrcode').src = qrcode2	;
+
+			}
 			function copyToClipboard(element) {
 				var $temp = $("<input>");
 				$("body").append($temp);
@@ -91,6 +102,28 @@
 		<!--iframe id="frmPizzas" src="produtos/pizzas.txt" onload="loadFile('frmPizzas');" style="display: none;"></iframe>
 		<iframe id="frmVolutellas" src="produtos/volutellas.txt" onload="loadFile('frmVolutellas');" style="display: none;"></iframe>
 		<iframe id="frmPaes" src="produtos/paes.txt" onload="loadFile('frmPaes');" style="display: none;"></iframe-->
+		<div class="modal modal-lg fade" id="gerarPix" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+			    <h5 class="modal-title">Pague com Pix!</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<ul class="row gy-2" style="list-style-type:none; padding: 0; margin: 0">
+					<li><input id="valor" type="number" min="0.00" step="0.05" value="1.00" class="form-control" placeholder="valor"></li>							<!--li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</button></li-->
+					<li><button href="#" class="btn btn-primary btn-xl" onclick="calcular()">Calcular</button></li>
+					<li><img id="qrcode"></li>
+				</ul>		
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+			  </div>
+			</div>
+		  </div>
+		</div>			
 		<div class="modal modal-lg fade" id="encomendaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -221,10 +254,10 @@
                         <p class="text-white-75 mb-5">Do Freezer direto para a Airfryer!</p>
 						<p id="pix" hidden>00020101021126330014br.gov.bcb.pix0111086117736325204000053039865802BR5914LUDIMILA BRAGA6009SAO PAULO622905251GZ6JGGDQR75H0VDDG7J859FN63044CA0</p>
 						<ul class="row gy-2" style="list-style-type:none; padding: 0; margin: 0">
-							<li><button href="#" class="btn btn-primary btn-xl" onclick="$('#encomendaModal').modal('show')">Nossos Sabores</button></li>
-							<!--li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</button></li-->
+							<li><button href="#" class="btn btn-primary btn-xl" onclick="$('#encomendaModal').modal('show')">Nossos Sabores</button></li>							<!--li><button href="#" class="btn btn-primary btn-xl" onclick="copyToClipboard('#pix')">Pague com Pix</button></li-->
 							<li><a href="https://instagram.com/airfood_ofc" class="btn btn-primary btn-xl">Nosso Instagram</a></li>
 							<li><a href="https://wa.me/5532991757115?text=Ol%C3%A1%2C%20equipe%20Airfood%21%20Eu%20gostaria%20de%20fazer%20um%20encomenda%21" class="btn btn-primary btn-xl">Nosso WhatsApp</a></li>
+							<li><button href="#" class="btn btn-primary btn-xl" onclick="$('#gerarPix').modal('show')">Quer pagar com Pix?</button></li>
 						</ul>	
                     </div>
                 </div>
@@ -241,6 +274,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+		<script src="js/faz-um-pix.min.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
